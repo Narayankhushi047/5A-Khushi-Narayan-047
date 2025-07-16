@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> fat arrow function </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        function timeleft(start, end){
+            var seconds = Math.floor((new Date(end)-new Date(start))/1000);
+
+            var h=Math.floor(seconds/3600);
+            var m=Math.floor((seconds%3600)/60);
+            var s=seconds%60;
+
+            if (h<10) h="0"+h;
+            if (m<10) m="0"+m;
+            if (s<10) s="0"+s;
+
+            console.log(h + ":" + m + ":" + s);
+        }
+
+
+        timeleft("2025-07-16T21:00:00", "2025-07-16T22:00:00");
+    </script>
+</body>
+</html>
